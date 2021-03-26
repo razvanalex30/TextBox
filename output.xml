@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210326 10:00:52.896" rpa="false">
+<suite id="s1" name="TestTextBox" source="C:\Users\RAlexandru\Documents\Proiecte Eclipse\TestTextBox">
+<suite id="s1-s1" name="Test Text Box" source="C:\Users\RAlexandru\Documents\Proiecte Eclipse\TestTextBox\Test_Text_Box.robot">
+<test id="s1-s1-t1" name="Test_text_box">
+<kw name="Open Browser Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20210326 10:00:53.091" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/text-box'.</msg>
+<status status="PASS" starttime="20210326 10:00:53.091" endtime="20210326 10:00:55.665"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210326 10:00:55.665" endtime="20210326 10:00:55.776"></status>
+</kw>
+<status status="PASS" starttime="20210326 10:00:53.090" endtime="20210326 10:00:55.777"></status>
+</kw>
+<kw name="Insert Data">
+<kw name="Insert Full Name" library="insert_data.InsertData">
+<arguments>
+<arg>${full_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210326 10:00:55.777" endtime="20210326 10:00:55.852"></status>
+</kw>
+<kw name="Insert Email" library="insert_data.InsertData">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<status status="PASS" starttime="20210326 10:00:55.853" endtime="20210326 10:00:55.928"></status>
+</kw>
+<kw name="Insert Current Address" library="insert_data.InsertData">
+<arguments>
+<arg>${current_address}</arg>
+</arguments>
+<status status="PASS" starttime="20210326 10:00:55.928" endtime="20210326 10:00:55.984"></status>
+</kw>
+<kw name="Insert Permanent Address" library="insert_data.InsertData">
+<arguments>
+<arg>${permanent_address}</arg>
+</arguments>
+<status status="PASS" starttime="20210326 10:00:55.984" endtime="20210326 10:00:56.046"></status>
+</kw>
+<status status="PASS" starttime="20210326 10:00:55.777" endtime="20210326 10:00:56.046"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scroll(0,300)</arg>
+</arguments>
+<msg timestamp="20210326 10:00:56.046" level="INFO">Executing JavaScript:
+window.scroll(0,300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210326 10:00:56.046" endtime="20210326 10:00:56.049"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit</arg>
+</arguments>
+<msg timestamp="20210326 10:00:56.050" level="INFO">Clicking element 'id=submit'.</msg>
+<status status="PASS" starttime="20210326 10:00:56.050" endtime="20210326 10:00:56.082"></status>
+</kw>
+<kw name="Find Data">
+<kw name="Find Name" library="verify_data.VerifyData">
+<msg timestamp="20210326 10:00:56.099" level="INFO">Name was found!</msg>
+<status status="PASS" starttime="20210326 10:00:56.083" endtime="20210326 10:00:56.099"></status>
+</kw>
+<kw name="Find Email" library="verify_data.VerifyData">
+<msg timestamp="20210326 10:00:56.116" level="INFO">Email was found!</msg>
+<status status="PASS" starttime="20210326 10:00:56.099" endtime="20210326 10:00:56.116"></status>
+</kw>
+<kw name="Find Current Address" library="verify_data.VerifyData">
+<msg timestamp="20210326 10:00:56.134" level="INFO">Current Address was found!</msg>
+<status status="PASS" starttime="20210326 10:00:56.116" endtime="20210326 10:00:56.134"></status>
+</kw>
+<kw name="Find Permanent Address" library="verify_data.VerifyData">
+<msg timestamp="20210326 10:00:56.151" level="INFO">Permanent Address was found!</msg>
+<status status="PASS" starttime="20210326 10:00:56.134" endtime="20210326 10:00:56.151"></status>
+</kw>
+<status status="PASS" starttime="20210326 10:00:56.082" endtime="20210326 10:00:56.152"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210326 10:01:01.154" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210326 10:00:56.152" endtime="20210326 10:01:01.154"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210326 10:01:01.155" endtime="20210326 10:01:03.284"></status>
+</kw>
+<status status="PASS" starttime="20210326 10:00:53.090" endtime="20210326 10:01:03.285" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210326 10:00:52.940" endtime="20210326 10:01:03.286"></status>
+</suite>
+<status status="PASS" starttime="20210326 10:00:52.923" endtime="20210326 10:01:03.287"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestTextBox">TestTextBox</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Test Text Box">TestTextBox.Test Text Box</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

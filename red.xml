@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <robotExecEnvironment path="C:/Users/RAlexandru/AppData/Local/Programs/Python/Python39" interpreter="Python"/>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="insert_data.InsertData" path="TestTextBox/insert_data.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="verify_data.VerifyData" path="TestTextBox/verify_data.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/RAlexandru/AppData/Local/Programs/Python/Python39/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="create_driver.SeleniumLibraryExt" path="TestTextBox/create_driver.py" dynamic="false"/>
+    <pythonpath/>
+    <classpath/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>

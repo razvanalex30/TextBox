@@ -8,34 +8,26 @@ Open Browser Page
     Open Browser    ${url}    ${browser}
     Maximize Browser Window
     
-Insert Data
-    Insert Full Name    ${full_name}
-    Insert Email    ${email}
-    Insert Current Address    ${current_address}
-    Insert Permanent Address    ${permanent_address}
-
-Find Data
-    Find Name
-    Find Email
-    Find Current Address
-    Find Permanent Address
+# Find Data
+    # Find Name
+    # Find Email
+    # Find Current Address
+    # Find Permanent Address
     
 *** Variables ***
 ${url}    https://demoqa.com/text-box
+&{dict_values}    Full Name=sdasdas    Email=razvan@yahoo.com    Current Address=sdasda    Permanent Address=sadsadsa
 ${browser}    chrome
-${full_name}    sdsadsa
-${email}    asdsada@yahoo.com
-${current_address}    sdasdsadsa
-${permanent_address}    sadsadsadsasdasdsa
 
 
 *** Test Cases ***
 Test_text_box
     Open Browser Page
-    Insert Data
+    Retrieve Text Boxes
+    Insert Data    ${dict_values}
     Execute Javascript    window.scroll(0,300)
     Click Element   id=submit
-    Find Data
+    Check Data
     Sleep    5
     Close Browser
     

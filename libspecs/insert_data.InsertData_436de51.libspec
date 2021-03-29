@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="insert_data.InsertData" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2021-03-25T15:25:58Z" specversion="2" source="C:\Users\RAlexandru\Documents\Proiecte Eclipse\TestTextBox\insert_data.py" lineno="8">
+<keywordspec name="insert_data.InsertData" type="LIBRARY" format="ROBOT" scope="TEST" namedargs="true" generated="2021-03-29T08:34:54Z" specversion="2" source="C:\Users\RAlexandru\Documents\Proiecte Eclipse\TestTextBox\insert_data.py" lineno="8">
 <version />
 <scope>test case</scope>
 <namedargs>yes</namedargs>
 <doc>Documentation for library ``insert_data.InsertData``.</doc>
-<kw name="Insert Current Address" lineno="22">
+<kw name="Insert Data" lineno="29">
 <arguments>
-<arg>current_address=None</arg>
+<arg>dictionary</arg>
 </arguments>
 <doc />
 </kw>
-<kw name="Insert Email" lineno="16">
+<kw name="Retrieve Text Boxes" lineno="10">
 <arguments>
-<arg>email=None</arg>
-</arguments>
-<doc />
-</kw>
-<kw name="Insert Full Name" lineno="10">
-<arguments>
-<arg>full_name=None</arg>
-</arguments>
-<doc />
-</kw>
-<kw name="Insert Permanent Address" lineno="28">
-<arguments>
-<arg>permanent_address=None</arg>
 </arguments>
 <doc />
 </kw>

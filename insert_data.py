@@ -6,27 +6,29 @@ import SeleniumLibrary
 
 
 class InsertData:
-
-    def insert_full_name(self, full_name=None):
+   
+    def retrieve_text_boxes(self):
         self.driver = SeleniumLibraryExt.create_driver()
-        text_box = self.driver.find_element_by_id("userName")
-        text_box.clear()
-        text_box.send_keys(full_name)
+        label_dict = dict()
+        xpaths = list()
+        form_1 = self.driver.find_elements_by_xpath("//div[@class='col-md-9 col-sm-12']//input")
+        for elem in form_1:
+            key = elem.get_attribute('id')
+            xpath = f"//div[@class='col-md-9 col-sm-12']//input[@id='{key}']"
+            xpaths.append(xpath)
+        form_2 = self.driver.find_elements_by_xpath("//div[@class='col-md-9 col-sm-12']//textarea")
+        for elem in form_2:
+            key = elem.get_attribute('id')
+            xpath = f"//div[@class='col-md-9 col-sm-12']//textarea[@id='{key}']"
+            xpaths.append(xpath)
+        form_3 = self.driver.find_elements_by_xpath("//div[@class='col-md-3 col-sm-12']//label")
+        for i in range(len(form_3)):
+            label_dict[form_3[i].text] = xpaths[i]
+        self.dict = label_dict
 
-    def insert_email(self, email=None):
-        # self.driver = SeleniumLibraryExt.create_driver()
-        text_box = self.driver.find_element_by_id("userEmail")
-        text_box.clear()
-        text_box.send_keys(email)
-
-    def insert_current_address(self, current_address=None):
-        # self.driver = SeleniumLibraryExt.create_driver()
-        text_box = self.driver.find_element_by_id("currentAddress")
-        text_box.clear()
-        text_box.send_keys(current_address)
-
-    def insert_permanent_address(self, permanent_address=None):
-        # self.driver = SeleniumLibraryExt.create_driver()
-        text_box = self.driver.find_element_by_id("permanentAddress")
-        text_box.clear()
-        text_box.send_keys(permanent_address)
+    def insert_data(self, dictionary):
+        for key in dictionary:
+            if key in self.dict:
+                text_box = self.driver.find_element_by_xpath(self.dict[key])
+                text_box.clear()
+                text_box.send_keys(dictionary[key])
